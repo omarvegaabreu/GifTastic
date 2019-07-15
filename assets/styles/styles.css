@@ -1,45 +1,193 @@
 body {
-  font: 18px arial, sans-serif;
-  background-color: rgb(69, 164, 196);
+  color: white;
 }
 
-#animals-form {
-  float: left;
-  background-color: aliceblue;
-}
-#animals {
-  width: 70%;
-}
-.animals-item {
-  float: left;
-  padding: 20px;
-}
-label {
-  display: block;
-  margin-bottom: 10px;
-}
-input[type="text"] {
+.bg {
+  position: fixed;
+  background-repeat: no-repeat;
+  z-index: -1;
+  height: 100%;
   width: 100%;
-  height: 30px;
-  margin-bottom: 10px;
-  font-size: 18px;
+  background-size: cover;
+  background-image: url("https://i0.wp.com/wallur.com/wp-content/uploads/2016/12/africa-background-6.jpg?fit=1920%2C1080");
+  opacity: 0.9;
 }
-button,
-input[type="submit"] {
-  padding: 5px 20px;
-  margin: 0 10px 10px 0;
-  font-size: 18px;
-  color: #ffffff;
-  cursor: pointer;
-  background-color: #659a98;
-  border: 0;
-  border-radius: 5px;
-  box-shadow: 2px 2px 3px #bbb;
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+  text-shadow: 1px 1px rgba(77, 70, 70, 0.719);
+  font-family: "Notable", sans-serif;
+  animation-name: slideInDown;
 }
-button:hover,
-input[type="submit"]:hover {
-  background: #334e4d;
+
+h2 {
+  margin-top: 15px;
+  text-align: center;
+  text-shadow: 1px 1px rgba(77, 70, 70, 0.719);
+  font-family: "Montserrat", sans-serif;
 }
-button.active {
-  background: #334e4d;
+
+h2.alert {
+  opacity: 0.9;
+}
+
+h3,
+h4,
+label {
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+button {
+  margin: 2px;
+}
+
+form {
+  margin: 5px;
+  margin-bottom: 20px;
+}
+
+#button-input {
+  border-radius: 10px;
+  border: 1.5px solid #07beb8;
+  background-color: rgba(121, 121, 230, 0.466);
+  color: white;
+  margin-bottom: 5px;
+  padding: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+#button-input:hover {
+  background-color: transparent;
+}
+
+#button-input:focus {
+  border: 2px solid #07beb8;
+}
+
+#display {
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.col-md-3 {
+  background-color: rgb(177, 174, 174, 0.4);
+  border-radius: 20px;
+  padding-bottom: 10px;
+}
+
+img {
+  margin-right: 10px;
+}
+img:hover {
+  transition: 0.3s ease-in-out;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px rgb(96, 96, 104, 0.7);
+  border-radius: 10px;
+  border: 3px rgb(175, 175, 216) solid;
+  cursor: crosshair;
+}
+
+/* Animations */
+
+@-webkit-keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+  animation-duration: 0.4s;
+}
+
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  animation-duration: 0.7s;
 }

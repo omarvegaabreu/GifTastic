@@ -1,39 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
-    />
+    <meta charset="utf-8" />
+    <title>GifTastic</title>
     <link rel="stylesheet" href="./assets/styles/styles.css" />
-    <title>Giftastic</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat|Notable"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css"
+      integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+      crossorigin="anonymous"
+    />
   </head>
 
   <body>
-    <h1>Wild Animals!</h1>
-    <br />
+    <div class="bg"></div>
+    <h1 class="slideInDown">Zoo animals!!!!!</h1>
+    <h4 class="text-center">
+      Click a button to see your your adorable animals!!!!
+    </h4>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 fadeInUp">
+          <form id="button-form">
+            <div class="input-group">
+              <label for="button-input">Search for your favorite animal</label>
+              <input
+                type="text"
+                id="button-input"
+                placeholder="animals"
+              /><br />
 
-    <form id="animals-form">
-      <label for="animals-input">Search for your favorite Animal!</label>
-      <input type="text" id="animal-input" />
-      <br />
-      <input id="add-animal" type="submit" value="Submit" />
-    </form>
-
-    <div id="animals-buttons"></div>
-
-    <div id="images"></div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="./assets/js/app.js"></script>
+              <!-- Button triggers new search to be added -->
+              <input
+                class="btn btn-info align-middle"
+                id="add-search"
+                type="submit"
+                value="Add a Button"
+              />
+            </div>
+          </form>
+          <hr />
+          <div id="buttons-view"></div>
+        </div>
+        <div class="col-md-9">
+          <div id="search-title"></div>
+          <div id="display"></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/js/app.js"></script>
   </body>
 </html>
