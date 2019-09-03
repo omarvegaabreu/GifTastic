@@ -2,6 +2,8 @@
 
 URL: https://omarvegaabreu.github.io/GifTastic/
 
+![](assets/images/giphyhome.jpg)
+
 ### Overview
 
 This application is connected to the GIPHY API to make a dynamic web page that populates with gifs of choice. The call to the GIPHY API is with jQuery to dynamically change the HTML of the site.
